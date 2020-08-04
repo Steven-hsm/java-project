@@ -19,6 +19,7 @@
         <module>spring-boot-jdbc</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-mutlidatasource</module>
+        <module>spring-boot-cache</module>
     </modules>
     <dependencies>
         <!-- 测试类 -->
