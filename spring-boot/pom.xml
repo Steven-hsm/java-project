@@ -17,6 +17,8 @@
         <module>spring-boot-amqp</module>
         <module>spring-boot-web</module>
         <module>spring-boot-jdbc</module>
+        <module>spring-boot-mybatis</module>
+        <module>spring-boot-mutlidatasource</module>
     </modules>
     <dependencies>
         <!-- 测试类 -->
@@ -32,6 +34,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.8</version>
             <optional>true</optional>
+        </dependency>
+        <!-- 测试类 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
