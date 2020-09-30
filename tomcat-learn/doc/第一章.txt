@@ -1,0 +1,13 @@
+基于java的Web服务器会使用两个重要的类
+    java.net.Socket类和java.net.ServerSocket类
+
+http请求包含以下三部分:
+    请求方法 --- 统一资源标示符 --- 协议/版本
+    请求头
+    实体
+http支持的7中请求方法:get post head options put delete trace
+
+http相应包含以下三部分:
+    协议 --- 状态吗 --- 描述
+    相应头
+    相应实体段

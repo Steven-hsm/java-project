@@ -1,0 +1,8 @@
+servlet同期如何工作?
+    1. 创建一个request对象,用可能会在调用的Servlet中使用到的信息填充该request对象
+    2. 创建一个调用Servlet的response对象,用来向web客户端发出响应
+    3. 调用servlet的service()方法,将上述两个对象作为参数传入
+
+catalina
+    链接器:将一个请求和容器关联,
+    容器:从连接器中接收request对象和response对象,并负责调用相应的servlet的service()方法
