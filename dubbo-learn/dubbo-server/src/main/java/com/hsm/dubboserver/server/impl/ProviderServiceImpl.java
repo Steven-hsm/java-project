@@ -1,6 +1,6 @@
 package com.hsm.dubboserver.server.impl;
 
-import com.hsm.dubboserver.ProviderService;
+import com.hsm.dubboserver.server.ProviderService;
 
 public class ProviderServiceImpl implements ProviderService {
     @Override

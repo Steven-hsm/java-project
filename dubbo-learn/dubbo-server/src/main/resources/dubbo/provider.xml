@@ -11,7 +11,7 @@
     <dubbo:protocol name="dubbo" port="20890"/>
     <!--服务发布的配置，需要暴露的服务接口-->
     <dubbo:service
-            interface="com.hsm.dubboserver.ProviderService"
+            interface="com.hsm.dubboserver.server.ProviderService"
             ref="providerService"/>
 
     <!--Bean bean定义-->

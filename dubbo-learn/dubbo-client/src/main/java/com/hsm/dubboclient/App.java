@@ -1,6 +1,6 @@
 package com.hsm.dubboclient;
 
-import com.hsm.dubboserver.ProviderService;
+import com.hsm.dubboserver.server.ProviderService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
