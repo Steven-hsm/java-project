@@ -16,6 +16,7 @@
         <module>rabbitmq</module>
         <module>tomcat-learn</module>
         <module>dubbo-learn</module>
+        <module>flyway-learn</module>
     </modules>
     <dependencies>
         <dependency>
