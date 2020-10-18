@@ -192,3 +192,7 @@ docker build [选项] 路径
 
 # 7. docker-compose
 
+docker官方编排项目之一,负责快速在集群中部署分布式应用.Dockerfile 可以让用户管理一个单独的应用容器；而 Compose 则允许用户在一个模板（YAML 格式）中定义一组相关联的应用容器（被称为一个 `project`，即项目）
+
+此项目是python编写,所以需要先安装python
+
