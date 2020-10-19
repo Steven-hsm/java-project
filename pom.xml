@@ -17,12 +17,18 @@
         <module>tomcat-learn</module>
         <module>dubbo-learn</module>
         <module>flyway-learn</module>
+        <module>spock-learn</module>
     </modules>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.13</version>
         </dependency>
     </dependencies>
 
