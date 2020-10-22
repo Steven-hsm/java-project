@@ -20,7 +20,6 @@ public class QueryCollectionService {
 
     /**
      * 获取【集合名称】列表
-     *
      * @return 集合名称列表
      */
     public Object getCollectionNames() {
@@ -30,7 +29,6 @@ public class QueryCollectionService {
 
     /**
      * 检测集合【是否存在】
-     *
      * @return 集合是否存在
      */
     public boolean collectionExists() {

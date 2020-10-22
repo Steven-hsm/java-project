@@ -22,9 +22,13 @@ public class CreateCollectionServiceTest {
 
     @Test
     public void createCollectionFixedSize() {
+        Object collection = createCollectionService.createCollectionFixedSize();
+        System.out.println(collection.toString());
     }
 
     @Test
     public void createCollectionValidation() {
+        Object collection = createCollectionService.createCollectionValidation();
+        System.out.println(collection.toString());
     }
 }

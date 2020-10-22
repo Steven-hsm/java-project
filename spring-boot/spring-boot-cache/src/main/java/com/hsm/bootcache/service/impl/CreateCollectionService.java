@@ -24,9 +24,7 @@ public class CreateCollectionService {
 
     /**
      * 创建【集合】
-     *
      * 创建一个大小没有限制的集合（默认集合创建方式）
-     *
      * @return 创建集合的结果
      */
     public Object createCollection() {
@@ -35,14 +33,12 @@ public class CreateCollectionService {
         // 创建集合并返回集合信息
         mongoTemplate.createCollection(collectionName);
         // 检测新的集合是否存在，返回创建结果
-        return mongoTemplate.collectionExists(collectionName) ? "创建视图成功" : "创建视图失败";
+        return mongoTemplate.collectionExists(collectionName) ? "创建集合成功" : "创建集合失败";
     }
 
     /**
      * 创建【固定大小集合】
-     *
      * 创建集合并设置 `capped=true` 创建 `固定大小集合`，可以配置参数 `size` 限制文档大小，可以配置参数 `max` 限制集合文档数量。
-     *
      * @return 创建集合的结果
      */
     public Object createCollectionFixedSize() {
@@ -62,7 +58,7 @@ public class CreateCollectionService {
         // 执行创建集合
         mongoTemplate.createCollection(collectionName, collectionOptions);
         // 检测新的集合是否存在，返回创建结果
-        return mongoTemplate.collectionExists(collectionName) ? "创建视图成功" : "创建视图失败";
+        return mongoTemplate.collectionExists(collectionName) ? "创建集合成功" : "创建集合失败";
     }
 
     /**
