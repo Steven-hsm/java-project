@@ -43,4 +43,14 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <!-- maven plugin 目的是为了可以使用java -jar 的方式启动 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.3.4.RELEASE</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
