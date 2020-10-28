@@ -15,4 +15,7 @@ public class User {
 
     /** 年龄*/
     private int age;
+
+    /** 性别 */
+    private String sex;
 }

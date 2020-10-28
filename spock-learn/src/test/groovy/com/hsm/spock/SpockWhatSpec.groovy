@@ -47,6 +47,9 @@ class SpockWhatSpec extends Specification {
         print(user.name)
     }
 
+    
+
+
 
 
 }
