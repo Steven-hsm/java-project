@@ -14,11 +14,11 @@ import java.util.Random;
  */
 public class WinMoney {
 
-    private static List<Integer> guessNums = Arrays.asList(2, 4, 6, 8, 10);
+    private static List<Integer> guessNums = Arrays.asList(2, 4);
 
     public static void main(String[] args) {
         //tryNum(100);
-        play11choose5(1,540);
+        play11choose5(1,6);
     }
 
     /**
@@ -43,7 +43,7 @@ public class WinMoney {
             //花了钱就买一笔
             List<Integer> winNums = getWinNums();
             if (isWin(guessNums, winNums)) {
-                System.out.println(String.format("第%s期中奖,总共花了%s钱,最后赢了%s钱,实际赚了%s钱", i, useTotalMoney, winPrice, winPrice - useTotalMoney));
+                System.out.println(String.format("第%s期中奖,总共花了%s钱,最后赢了%s钱,实际赚了%s钱,中奖号码为%s", i, useTotalMoney, winPrice, winPrice - useTotalMoney,winNums));
                 //尝试去掉break,可以打印很多期的
                 break;
             }
