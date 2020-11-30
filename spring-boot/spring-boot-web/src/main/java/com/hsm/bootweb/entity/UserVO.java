@@ -9,10 +9,12 @@ package com.hsm.bootweb.entity;
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
+import java.util.Date;
 
 @Data
 public class UserVO {
     @NotEmpty(message = "用户名不能为空")
     private String name;
     private int age;
+    private Date date;
 }
