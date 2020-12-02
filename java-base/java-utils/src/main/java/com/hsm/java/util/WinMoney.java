@@ -18,7 +18,7 @@ public class WinMoney {
 
     public static void main(String[] args) {
         //tryNum(100);
-        play11choose5(1,6);
+        play11choose5(2,6);
     }
 
     /**
@@ -33,9 +33,10 @@ public class WinMoney {
         int winPrice = originlWinPrice * rate;
         for (int i = 0; true; i++) {
             //如果你非要赢很多钱,可以将winPrice加上你想赢得钱
-            while (useTotalMoney + 2 * rate >= winPrice) {
+            while (useTotalMoney + 2 * rate > winPrice) {
                 rate += 1;
                 winPrice = originlWinPrice * rate;
+                System.out.println(String.format("第%s期加倍",i+1));
             }
             useTotalMoney += (2 * rate);
             //支付的钱如果比总金额大了,那肯定要翻倍了
@@ -43,7 +44,7 @@ public class WinMoney {
             //花了钱就买一笔
             List<Integer> winNums = getWinNums();
             if (isWin(guessNums, winNums)) {
-                System.out.println(String.format("第%s期中奖,总共花了%s钱,最后赢了%s钱,实际赚了%s钱,中奖号码为%s", i, useTotalMoney, winPrice, winPrice - useTotalMoney,winNums));
+                System.out.println(String.format("第%s期中奖,总共花了%s钱,最后赢了%s钱,实际赚了%s钱,中奖号码为%s", i+1, useTotalMoney, winPrice, winPrice - useTotalMoney,winNums));
                 //尝试去掉break,可以打印很多期的
                 break;
             }
