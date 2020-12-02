@@ -18,6 +18,8 @@
         <module>dubbo-learn</module>
         <module>flyway-learn</module>
         <module>spock-learn</module>
+        <module>eventbus-learn</module>
+        <module>netty-learn</module>
     </modules>
     <dependencies>
         <dependency>
