@@ -20,6 +20,8 @@
         <module>spock-learn</module>
         <module>eventbus-learn</module>
         <module>netty-learn</module>
+        <module>mongodb-learn</module>
+        <module>java-thread</module>
     </modules>
     <dependencies>
         <dependency>

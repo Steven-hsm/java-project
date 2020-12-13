@@ -1,4 +1,4 @@
-package com.hsm.spock
+package com.hsm.spock.subscriber
 /*
  * Copyright 2009 the original author or authors.
  *
