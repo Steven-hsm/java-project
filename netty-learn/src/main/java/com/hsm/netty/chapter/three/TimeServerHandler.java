@@ -1,18 +1,15 @@
-package com.hsm.handler;
+package com.hsm.netty.chapter.three;
 
-import com.hsm.entity.UnixTime;
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author senming.huang@lachesis-mh.com
- * @classname: TimeServerHandler
- * @description: TODO
- * @date 2020/11/10 17:18
+ * 时间处理器
  */
+@Slf4j
 public class TimeServerHandler extends SimpleChannelInboundHandler {
     /**
      * 连接被建立时调用
@@ -43,7 +40,14 @@ public class TimeServerHandler extends SimpleChannelInboundHandler {
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object o) throws Exception {
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object msg) throws Exception {
+        UnixTime m = (UnixTime) msg;
+        System.out.println(m);
+    }
 
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        UnixTime m = (UnixTime) msg;
+        System.out.println(m);
     }
 }

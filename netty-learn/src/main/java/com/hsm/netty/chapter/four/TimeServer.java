@@ -1,8 +1,5 @@
-package com.hsm.server;
+package com.hsm.netty.chapter.four;
 
-import com.hsm.decoder.TimeEncoder;
-import com.hsm.handler.DiscardServerHandler;
-import com.hsm.handler.TimeServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -11,13 +8,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.string.StringDecoder;
 
-/**
- * @author senming.huang@lachesis-mh.com
- * @classname: DiscardServer
- * @description: TODO
- * @date 2020/11/10 17:02
- */
 public class TimeServer {
     /**
      * 端口
@@ -41,7 +34,10 @@ public class TimeServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new TimeEncoder(),new TimeServerHandler());
+                            ch.pipeline().addLast(new TimeEncoder()
+                                    ,new TimeServerHandler()
+                                    ,new StringDecoder()
+                                    ,new LineBasedFrameDecoder(1024));
                         }
                     })
                     .option(ChannelOption.SO_BACKLOG, 128)
@@ -60,6 +56,8 @@ public class TimeServer {
     }
 
     public static void main(String[] args)  throws Exception{
-        new TimeServer(990).run();
+        new com.hsm.server.TimeServer(990).run();
     }
 }
+
+

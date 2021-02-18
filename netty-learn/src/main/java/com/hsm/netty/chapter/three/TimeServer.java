@@ -1,8 +1,5 @@
-package com.hsm.server;
+package com.hsm.netty.chapter.three;
 
-import com.hsm.decoder.TimeEncoder;
-import com.hsm.handler.DiscardServerHandler;
-import com.hsm.handler.TimeServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -12,12 +9,6 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
-/**
- * @author senming.huang@lachesis-mh.com
- * @classname: DiscardServer
- * @description: TODO
- * @date 2020/11/10 17:02
- */
 public class TimeServer {
     /**
      * 端口
@@ -60,6 +51,8 @@ public class TimeServer {
     }
 
     public static void main(String[] args)  throws Exception{
-        new TimeServer(990).run();
+        new com.hsm.server.TimeServer(990).run();
     }
 }
+
+

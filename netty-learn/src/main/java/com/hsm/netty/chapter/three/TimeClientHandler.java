@@ -1,19 +1,12 @@
-package com.hsm.handler;
+package com.hsm.netty.chapter.three;
 
-import com.hsm.entity.UnixTime;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.extern.slf4j.Slf4j;
 
-import java.util.Date;
-
-/**
- * @author senming.huang@lachesis-mh.com
- * @classname: TimeClientHandler
- * @description: TODO
- * @date 2020/11/10 17:30
- */
-public class TimeClientHandler  extends SimpleChannelInboundHandler {
+@Slf4j
+public class TimeClientHandler extends SimpleChannelInboundHandler {
     private ByteBuf buf;
 
     @Override
@@ -79,5 +72,12 @@ public class TimeClientHandler  extends SimpleChannelInboundHandler {
         System.out.println(m);
         ctx.close();
         //=============================4.使用实体对象接收===========================
+    }
+
+    @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        for (int i = 0; i < 100; i++) {
+            ctx.writeAndFlush(new UnixTime());
+        }
     }
 }
