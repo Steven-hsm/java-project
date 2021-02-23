@@ -22,6 +22,7 @@
         <module>netty-learn</module>
         <module>mongodb-learn</module>
         <module>java-thread</module>
+        <module>java-jvm</module>
     </modules>
     <dependencies>
         <dependency>
